@@ -1,0 +1,11 @@
+{
+  "client_id": "your-client-id",
+  "authorization_user_agent": "DEFAULT",
+  "redirect_uri": "msauth://com.your.package.name/your-redirect-uri",
+  "authorities": [
+    {
+      "type": "AAD",
+      "authority_url": "https://login.microsoftonline.com/common"
+    }
+  ]
+}
