@@ -1,5 +1,4 @@
 // Project-level build.gradle file
-
 buildscript {
     repositories {
         google()
@@ -10,6 +9,10 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.10"
     }
 }
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.9.22'
+}
+
 
 allprojects {
     repositories {
@@ -18,6 +21,19 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+kotlin {
+    jvmToolchain(8)
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
+    }
 }

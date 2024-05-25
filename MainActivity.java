@@ -6,6 +6,8 @@ public class MainActivity extends AppCompatActivity {
     private PublicClientApplication msalApp;
     private IAuthenticationResult authResult;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
